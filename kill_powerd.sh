@@ -6,5 +6,6 @@ usage_rounded=$(printf %.0f $usage)
 if [[ "$usage_rounded" -gt "80" ]] 
 then
 	systemctl restart nvidia-powerd.service
-	echo "$(date +%F-%R) powerd was restarted" >> /root/powerd.log
+	#Uncomment the next line if you want to log the restarts
+	#echo "$(date +%F-%R) powerd was restarted" >> /root/powerd.log
 fi
